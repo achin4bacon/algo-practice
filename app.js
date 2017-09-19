@@ -46,7 +46,39 @@ function allEqual(string) {
             }
         }
     }
-};
+}
+
+/*
+----------------------------------------
+CHALLENGE
+----------------------------------------
+
+Write a function named threeOdds that takes 2 numbers and returns true if there are 3 odd numbers _between_ those two numbers
+
+Example:
+
+If you pass 0,2 it should return false because the only number between 0 and 2 is 1
+If you pass 0,6 it should return true because between 0 and six (the numbers 1,2,3,4,5) there are three odds - 1, 3 and 5
+*/
+
+
+function threeOdds(n1, n2) {
+    var oddCount = 0;
+    for (var i = n1 + 1; i < n2; i++) {
+      console.log(i);
+      if (i % 2 !== 0) {
+        oddCount++;
+        console.log(` oddCount = ${oddCount}`);
+      }
+      if (oddCount >= 3) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+ console.log(threeOdds(0, 6));
+ console.log(threeOdds(0, 2));
 
 /*
 ----------------------------------------
